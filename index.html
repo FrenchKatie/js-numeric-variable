@@ -1,0 +1,81 @@
+
+<!-- *** TASK ONE *** -->
+        <!-- Create three variables to store the information needed. -->
+              <!-- var price; -->
+              <!-- var quantity; -->
+              <!-- var total; -->
+
+        <!-- Assign values to the price and quantity variables. -->
+              <!-- price = 5; -->
+              <!-- quantity = 14; -->
+
+        <!-- Calculate the total by multiplying the price by quantity. -->
+              <!-- total = price * quantity; -->
+
+        <!-- Get the element with an id of cost. -->
+              <!-- var el = document.getElementById('cost'); -->
+              <!-- el.textContent = '$' + total; -->
+
+
+<!-- *Task*
+      // 1. Pls make this work in html
+      // 2. Re-code the above using an object and a function declaration
+      // 3. Please call me over and show once you have completed -->
+
+
+
+<!-- *** TASK 2 *** -->
+
+        <!-- Create a variable to hold a random number between 1 and 10 -->
+              <!-- var randomNum = Math.floor((Math.random() * 10) + 1); -->
+
+        <!-- Create a variable called el to hold the element whose id attribute has a value of info -->
+              <!-- var el = document.getElementById('info'); -->
+
+        <!-- Write the number into that element -->
+              <!-- el.innerHTML = '<h2>random number</h2><p>' + randomNum + '</p>'; -->
+
+  <!-- *Task*
+      // 1. Please use the random code to print the random number to the console
+      // 2. Please use the random code to print the random number to the dom/html
+      // 3. Use some css and jquery to make the random number appear in a more interesting
+      // way. I.e Casino style, colors or anything you like (edited) -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Numeric Variable - Class Task</title>
+  </head>
+  <body>
+
+    <h1 id="info"></h1>
+
+    <script type="text/javascript">
+
+// *** Task 1 ***
+      var myObject = {
+        price: 5,
+        quantity: 14,
+        myMethod: function(){
+          var total = myObject.price * myObject.quantity; //to get "price" & "quantity" you must put "myObject." as it needs to call that object item from the list.  If you hadn't put the "myObject." then it will act like it is calling a variable(which you may have previously declared as empty)and will pull that undefined number instead.
+          console.log(total); //logging the total in the console
+        } //end of myMethod method
+      } //end of myObject object
+      function calculate(){ //declaring function that spits out myMethod method
+        myObject.myMethod();
+      }
+      calculate(); //calling the function to action
+
+
+// *** Task 2 ***
+      var randomNum = Math.floor((Math.random() * 10) + 1);
+      var el = document.getElementById('info');
+      el.innerHTML = '<h2>Your random number is:</h2><p>' + randomNum + '</p>';
+      console.dir(info);
+
+
+    </script>
+  </body>
+</html>
