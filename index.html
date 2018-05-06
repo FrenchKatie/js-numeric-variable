@@ -47,32 +47,54 @@
   <head>
     <meta charset="utf-8">
     <title>JS Numeric Variable - Class Task</title>
+    <style media="screen">
+      body{
+        font-family: helvetica;
+      }
+      #welcome{
+        font-size: 8em;
+        text-align: right;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      #intro{
+        text-align: right;
+        margin-right: 20px;
+        font-size: 2em;
+      }
+    </style>
   </head>
   <body>
 
     <h1 id="info"></h1>
+    <h1 id="welcome">Welcome</h1>
+    <p id="intro">Can you guess the correct random number?</p>
 
     <script type="text/javascript">
 
 // *** Task 1 ***
-      var myObject = {
-        price: 5,
-        quantity: 14,
-        myMethod: function(){
-          var total = myObject.price * myObject.quantity; //to get "price" & "quantity" you must put "myObject." as it needs to call that object item from the list.  If you hadn't put the "myObject." then it will act like it is calling a variable(which you may have previously declared as empty)and will pull that undefined number instead.
-          console.log(total); //logging the total in the console
-        } //end of myMethod method
-      } //end of myObject object
-      function calculate(){ //declaring function that spits out myMethod method
-        myObject.myMethod();
-      }
-      calculate(); //calling the function to action
+      // var myObject = {
+      //   price: 5,
+      //   quantity: 14,
+      //
+      //   myMethod: function(){
+      //     var total = myObject.price * myObject.quantity; //to get "price" & "quantity" you must put "myObject." as it needs to call that object item from the list.  If you hadn't put the "myObject." then it will act like it is calling a variable(which you may have previously declared as empty)and will pull that undefined number instead.
+      //     console.log(total); //logging the total in the console
+      //   } //end of myMethod method
+      //
+      // } //end of myObject object
+      //
+      //
+      // function calculate(){ //declaring function that spits out myMethod method
+      //   myObject.myMethod();
+      // }
+      // calculate(); //calling the function to action
 
 
 // *** Task 2 ***
       var randomNum = Math.floor((Math.random() * 10) + 1);
       var el = document.getElementById('info');
-      el.innerHTML = '<h2>Your random number is:</h2><p>' + randomNum + '</p>';
+      // el.innerHTML = '<h2>Your random number is:</h2><p>' + randomNum + '</p>';
       console.dir(info);
 
 
